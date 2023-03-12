@@ -1,9 +1,9 @@
 import ShowCard from './ShowCard';
 
-import { useStarredShow } from '../../lib/useStarShows';
+import { useStarredShows } from '../../lib/useStarredShows';
 
 const ShowGrid = ({ shows }) => {
-  const [starredShows, dispatchStarred] = useStarredShow();
+  const [starredShows, dispatchStarred] = useStarredShows();
 
   const onStarMeClick = showId => {
     const isStarred = starredShows.includes(showId);
