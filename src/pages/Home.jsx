@@ -14,30 +14,12 @@ const Home = () => {
       filter.searchOption === 'shows'
         ? searchForShows(filter.q)
         : searchForPeople(filter.q),
-    // ⬇️ disabled as long as the filter is empty
     enabled: !!filter,
     refetchOnWindowFocus: false,
   });
 
-  // const [apiData, setApiData] = useState(null);
-  // const [apiDataError, setApiDataError] = useState(null);
-
   const onSearch = async ({ q, searchOption }) => {
     setFilter({ q, searchOption });
-
-    //   try {
-    //     setApiDataError(null);
-
-    //     let result;
-    //     if (searchOption === 'shows') {
-    //       result = await searchForShows(q);
-    //     } else {
-    //       result = await searchForPeople(q);
-    //     }
-    //     setApiData(result);
-    //   } catch (error) {
-    //     setApiDataError(error);
-    //   }
   };
 
   const renderApiData = () => {
