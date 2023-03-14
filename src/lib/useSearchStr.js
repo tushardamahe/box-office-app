@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const usePersistaedState = (initialState, sessionStorageKey) => {
+const usePersistedState = (initialState, sessionStorageKey) => {
   const [state, setState] = useState(() => {
     const persistedValue = sessionStorage.getItem(sessionStorageKey);
 
@@ -15,5 +15,5 @@ const usePersistaedState = (initialState, sessionStorageKey) => {
 };
 
 export const useSearchStr = () => {
-  return usePersistaedState('', 'searchString');
+  return usePersistedState('', 'searchString');
 };

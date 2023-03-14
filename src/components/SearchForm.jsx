@@ -8,7 +8,7 @@ const SearchForm = ({ onSearch }) => {
   const [searchStr, setSearchStr] = useSearchStr();
   const [searchOption, setSearchOption] = useState('shows');
 
-  const onSearchinputChange = ev => {
+  const onSearchInputChange = ev => {
     setSearchStr(ev.target.value);
   };
 
@@ -31,9 +31,9 @@ const SearchForm = ({ onSearch }) => {
     <form onSubmit={onSubmit}>
       <SearchInput
         type="text"
-        placeholder='Search for something'
+        placeholder="Search for something"
         value={searchStr}
-        onChange={onSearchinputChange}
+        onChange={onSearchInputChange}
       />
 
       <RadiosWrapper>
