@@ -75,10 +75,6 @@ const SearchInput = styled.input`
   font-size: 14px;
   border-radius: 12px;
   color: #8d8d8d;
-  &::placeholder {
-    font-weight: 300;
-    color: #8d8d8d;
-  }
 `;
 
 export const RadiosWrapper = styled.div`
